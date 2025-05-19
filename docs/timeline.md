@@ -1,0 +1,20 @@
+# Timeline
+
+| **Week** | **Description of Task**                                                                             | **Status**  |
+|----------|-----------------------------------------------------------------------------------------------------|-------------|
+| W1       | Decide on project and submit initial proposal                                                       | Completed   |
+| W1       | Investigate feasibility of retrieving Microsoft Teams <br> messages as initial dataset              | Completed   |
+| W1       | Write initial script to collect dataset of all <br> security alerts from Teams                      | Completed   |
+| W1 / W2  | Perform initial research on ML, LLM, and agentic RAG<br> and construct initial library of resources | In Progress |
+| W2       | Collect dataset of all security alerts from Teams                                                   | Completed   |
+| W2       | Collect dataset of all internal wiki pages                                                          | Completed   |
+| W2       | Collect dataset of all security web pages, incluing policies                                        | In Progress |
+| W3       | Continue background research                                                                        | Not Started |
+| W4       | Outline solution approach and how it is informed <br> by background research                        | Not Started |
+| W5       | Work on technical design                                                                            | Not Started |
+| W6       | Continue working on technical implementation                                                        | Not Started |
+| W7       | Continue work on implementation                                                                     | Not Started |
+| W8       | Develop an evaluation plan for solution                                                             | Not Started |
+| W9       | Explore solution limitations, future work, etc.                                                     | Not Started |
+| W10      | Write final project report                                                                          | Not Started |
+| W11      | Write final project report                                                                          | Not Started |

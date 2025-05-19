@@ -1,0 +1,5 @@
+.idea
+.venv
+data_files
+source/data_scraping/ms_graph/output
+source/data_scraping/ms_graph/config

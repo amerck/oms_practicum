@@ -1,0 +1,9 @@
+site_name: Alex Merck's OMS Cybersecurity Practicum
+site_url: https://amerck_oms_practicum.readthedocs.io
+theme: readthedocs
+docs_dir: docs
+nav:
+    - index.md
+    - Timeline: timeline.md
+    - ML Notes: ml_notes.md
+    - References: references.md
