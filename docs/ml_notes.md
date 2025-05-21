@@ -54,3 +54,43 @@
     * Model subclassing
         * Implement everything from scratch
         * Used for out-of-box research use cases
+
+
+## Training Models
+* Options for training a new model
+    * Fine tuning
+        * Potentially very costly
+        * Time consuming to train (or fine tune) a model
+        * Low Rank Adaptation (LoRA) and Quantized Low Rank Adaptation (QLoRA) an option
+            * Able to run on lower resource hardware
+        * Possibility for catastrophic forgetting
+    * Freeze, add adapter layers, and train adapter layers
+        * Still susceptible to hallucinations
+* Sentence-based Bidirectional Encoder Representations from Transformers (SBERT)
+    * General idea is the same as training word embeddings
+    * sentence-transformers Python library contains several SBERT models (https://www.sbert.net/docs/sentence_transformer/pretrained_models.html)
+* LangChain
+    * Text Splitters
+        * https://python.langchain.com/docs/concepts/text_splitters/
+        * RecursiveCharacterTextSplitter()
+            * chunk_size - maximum length of text string output
+            * chunk_overlap - how many characters overlap previous and next string
+            * length_function - function name to determine length of chunk
+
+
+## Data Processing
+* Handling HTML data:
+    * https://beautiful-soup-4.readthedocs.io/en/latest/
+    * https://pypi.org/project/markdownify/
+
+
+## RAG
+
+* Rough steps
+    1. Create model that can convert text into embedding vectors
+    2. Convert data into suitable format
+    3. Take text and convert into overlapping chunks
+    4. Convert chunks into embeddings
+    5. Store embeddings and text into vector database
+    6. Search database for elements related to a given question
+    7. Feed question, search results, and prompt into LLM 
