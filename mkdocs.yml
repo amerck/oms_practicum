@@ -6,4 +6,5 @@ nav:
     - index.md
     - Timeline: timeline.md
     - ML Notes: ml_notes.md
+    - Scripts: scripts.md
     - References: references.md
