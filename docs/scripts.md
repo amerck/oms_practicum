@@ -105,6 +105,7 @@ output_dir = ./archive
 ```
 
 Description of the configuration options are as follows:
+
 * domain: The base domain name of the site you wish to crawl
 * auth_url: The URL to authenticate against prior to scanning
 * auth_verification_url: The URL that confirms authentication was successful
