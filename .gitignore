@@ -1,5 +1,8 @@
 .idea
 .venv
 data_files
-source/data_scraping/ms_graph/output
 source/data_scraping/ms_graph/config
+source/data_scraping/ms_graph/output
+source/data_scraping/web_crawler/archive
+source/data_scraping/web_crawler/config
+source/data_scraping/web_crawler/state.json
