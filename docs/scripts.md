@@ -2,6 +2,8 @@
 
 ## ms_crawler.py
 
+A script for scraping all messages, comments, and reactions from a Microsoft Teams channel and storing this data in JSON format.
+
 This script can be found at [https://github.com/amerck/oms_practicum/tree/main/source/data_scraping/ms_graph](https://github.com/amerck/oms_practicum/tree/main/source/data_scraping/ms_graph).
 
 ### Configuration
@@ -79,6 +81,8 @@ Enter the URL in a browser, submit the code, and authenticate to Microsoft as yo
 ```
 
 ## web_crawler.py
+
+A script for crawling a website and copying all HTML and binary files to disk.
 
 This script can be found at [https://github.com/amerck/oms_practicum/tree/main/source/data_scraping/web_crawler](https://github.com/amerck/oms_practicum/tree/main/source/data_scraping/web_crawler).
 
