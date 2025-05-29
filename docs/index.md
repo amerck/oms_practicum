@@ -6,5 +6,6 @@ This project attempts to address this issue by applying machine learning and ret
 
 * [Timeline](./timeline.md)
 * [Machine Learning Notes](./ml_notes.md)
+* [Development Environment](./training_tests.md)
 * [Scripts](./scripts.md)
 * [References](./references.md)
