@@ -46,7 +46,7 @@ RUN pip install -r /tmp/requirements.txt
 
 ### Jupyter Notebooks
 
-[LLM_Chat.ipynb](https://github.com/amerck/oms_practicum/tree/main/dev_environ/jupyter/jupyter-data/LLM-Chat.ipynb)
+[LLM_Chat.ipynb](https://github.com/amerck/oms_practicum/blob/main/dev_environ/jupyter-data/LLM_Chat.ipynb)
 
 ```python
 import json
