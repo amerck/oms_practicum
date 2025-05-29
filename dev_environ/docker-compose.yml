@@ -1,0 +1,9 @@
+services:
+  jupyter:
+    build:
+      context: jupyter
+    ports:
+      - 8889:8888
+    volumes:
+      - ./jupyter-data:/home/jovyan/work
+    command: start-notebook.py

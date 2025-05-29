@@ -83,6 +83,11 @@
     * https://beautiful-soup-4.readthedocs.io/en/latest/
     * https://pypi.org/project/markdownify/
 
+* Extracting metadata from alerts
+    * Identify common alert types / categories based on Teams message title
+    * Identify metadata fields from alert body
+    * Create regular expressions to collect metadata from alert body
+    * Develop a function to automatically extract metadata
 
 ## RAG
 
@@ -94,3 +99,18 @@
     5. Store embeddings and text into vector database
     6. Search database for elements related to a given question
     7. Feed question, search results, and prompt into LLM 
+
+* Testing method
+    1. Use a small subset of data
+    2. Craft a standard set of questions about the data
+    3. Create an evaluation system that scores the effectiveness of the RAG system with yes / no responses
+    4. Use a different LLM for evaluation than the one you used for encoding vector embeddings
+    5. Run each test multiple times and average the score
+
+
+## Vector Databases
+
+* Data can be formatted several ways
+    * Flattened JSON object
+    * Markdown object
+    * Large blob of text

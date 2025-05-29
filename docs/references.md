@@ -17,6 +17,14 @@
 * tf.TensorSpec ([https://www.tensorflow.org/api_docs/python/tf/TensorSpec](https://www.tensorflow.org/api_docs/python/tf/TensorSpec))
 
 
+## Vector Databases and Data Formatting
+* Vector database management systems: Fundamental concepts, use-cases, and current challenges ([https://www.sciencedirect.com/science/article/pii/S1389041724000093](https://www.sciencedirect.com/science/article/pii/S1389041724000093))
+* Milvus: A Purpose-Built Vector Data Management System ([https://dl.acm.org/doi/pdf/10.1145/3448016.3457550](https://dl.acm.org/doi/pdf/10.1145/3448016.3457550))
+* Ingest Data to Vector Database: Milvus Example ([https://www.decube.io/post/ingest-data-vector-database-milvus](https://www.decube.io/post/ingest-data-vector-database-milvus))
+* Ingesting Chaos: The MLOps Behind Handling Unstructured Data Reliably at Scale for RAG ([https://milvus.io/blog/Ingesting-Chaos-MLOps-Behind-Handling-Unstructured-Data-Reliably-at-Scale-for-RAG.md](https://milvus.io/blog/Ingesting-Chaos-MLOps-Behind-Handling-Unstructured-Data-Reliably-at-Scale-for-RAG.md))
+* SBERT: Sentence Transformers - Pretrained Models ([https://www.sbert.net/docs/sentence_transformer/pretrained_models.html](https://www.sbert.net/docs/sentence_transformer/pretrained_models.html))
+
+
 ## MS Graph
 
 * Build Python apps with Microsoft Graph ([https://learn.microsoft.com/en-us/graph/tutorials/python?tabs=aad](https://learn.microsoft.com/en-us/graph/tutorials/python?tabs=aad))
