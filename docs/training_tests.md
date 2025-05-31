@@ -20,6 +20,10 @@
     * ~~llama3.3:70b~~
     * ~~Also quite large~~
     * This model wouldn't run on my device
+* **llama3.2**: [https://ollama.com/library/llama3.2](https://ollama.com/library/llama3.2)
+    * llama3.2:3b
+* **llama3.1**: [https://ollama.com/library/llama3.1](https://ollama.com/library/llama3.1)
+    * llama3.1:8b
 
 
 ## Sentence Transformers
