@@ -1,11 +1,25 @@
 # Project Training Tests
 
 ## Potential Base LLM Models
-* **deepseek-r1**: [https://ollama.com/library/deepseek-r1](https://ollama.com/library/deepseek-r1)
+* ~~**deepseek-r1**: [https://ollama.com/library/deepseek-r1](https://ollama.com/library/deepseek-r1)~~
+    * ~~deepseek-r1:8b~~
+    * ~~"The model has demonstrated outstanding performance across various benchmark evaluations, including mathematics, programming, and general logic."~~
+    * This model was prone to freak-outs and paranoid ramblings, and was kind of racist
 * **gemma3**: [https://ollama.com/library/gemma3](https://ollama.com/library/gemma3)
+    * gemma3:12b
+    * "They excel in tasks like question answering, summarization, and reasoning, while their compact design allows deployment on resource-limited devices."
 * **qwen3**: [https://ollama.com/library/qwen3](https://ollama.com/library/qwen3)
-* **llama4**: [https://ollama.com/library/llama4](https://ollama.com/library/llama4)
-* **llama3**: [https://ollama.com/library/llama3.3](https://ollama.com/library/llama3.3)
+    * qwen3:8b
+    * "Achieves competitive results in benchmark evaluations of coding, math, general capabilities"
+* ~~**llama4**: [https://ollama.com/library/llama4](https://ollama.com/library/llama4)~~
+    * ~~llama4:16x17b~~
+    * ~~"Meta's latest collection of multimodal models."~~
+    * ~~MUCH larger than other models~~
+    * This model wouldn't run on my device
+* ~~**llama3.3**: [https://ollama.com/library/llama3.3](https://ollama.com/library/llama3.3)~~
+    * ~~llama3.3:70b~~
+    * ~~Also quite large~~
+    * This model wouldn't run on my device
 
 
 ## Sentence Transformers

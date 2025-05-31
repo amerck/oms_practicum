@@ -1,0 +1,10 @@
+Hello!
+Can you tell me a bit more about yourself?
+Keep all of your responses to the following questions concise.
+What can you tell me about this? {"message": {"test": "alert1"}}
+What are the metadata elements from that alert?
+What can you tell me about this? {"message": {"test": "alert2"}}
+What are the metadata elements from that alert?
+What can you tell me about this? {"message": {"test": "alert3"}}
+What are the metadata elements from that alert?
+I showed you several alerts previously. Which alert is the closest to the following alert? {"message": {"test": "alert1"}} If so, what are the differences?
