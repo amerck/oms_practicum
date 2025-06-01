@@ -1,5 +1,6 @@
 .idea
 .venv
+*.pyc
 data_files
 dev_environ/jupyter-data/.ipynb_checkpoints
 dev_environ/jupyter-data/test_outputs/*
