@@ -4,9 +4,10 @@ theme: readthedocs
 docs_dir: docs
 nav:
     - index.md
-    - Timeline: timeline.md
+    - Architecture: architecture.md
     - ML Notes: ml_notes.md
     - Development Environment: dev_environ.md
     - Training Tests: training_tests.md
     - Scripts: scripts.md
+    - Timeline: timeline.md
     - References: references.md
