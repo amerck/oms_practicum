@@ -23,6 +23,7 @@
 * Ingest Data to Vector Database: Milvus Example ([https://www.decube.io/post/ingest-data-vector-database-milvus](https://www.decube.io/post/ingest-data-vector-database-milvus))
 * Ingesting Chaos: The MLOps Behind Handling Unstructured Data Reliably at Scale for RAG ([https://milvus.io/blog/Ingesting-Chaos-MLOps-Behind-Handling-Unstructured-Data-Reliably-at-Scale-for-RAG.md](https://milvus.io/blog/Ingesting-Chaos-MLOps-Behind-Handling-Unstructured-Data-Reliably-at-Scale-for-RAG.md))
 * SBERT: Sentence Transformers - Pretrained Models ([https://www.sbert.net/docs/sentence_transformer/pretrained_models.html](https://www.sbert.net/docs/sentence_transformer/pretrained_models.html))
+* Run Milvus with Docker Compose (Linux) ([https://milvus.io/docs/install_standalone-docker-compose.md](https://milvus.io/docs/install_standalone-docker-compose.md))
 
 
 ## MS Graph
