@@ -37,4 +37,4 @@ Future goals:
 
 # Architecture Diagram
 
-![Architecture](images/architecture.png)
+![Architecture Diagram](images/arch_diagram.png)
