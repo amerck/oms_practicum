@@ -1,6 +1,36 @@
 # Project Training Tests
 
-## Potential Base LLM Models
+
+## Testing Methodology
+
+* Set up [development environment](./dev_environ.md)
+* [Measure potential base LLMs](https://github.com/amerck/oms_practicum/blob/main/source/ollama/test_models.py):
+    * Identify a set of potential base LLMs to test
+    * Create a set of at least 10 questions related to security alerts for testing
+    * Query each test LLM with the list of questions X number of times
+    * Write output in a set of plaintext files
+    * Upload these files to ChatGPT to estimate the accuracy of each answer to establish a score for each model
+    * Perform a manual review of a subset of answers to establish a score for each model
+    * Compare these two scores and identify the most accurate model
+* Measure data formats
+    * Select two potential data formats
+        * Markdown-like
+        * Structured Plaintext
+    * Generate a subset of data from flattened alerts
+    * Pass formats through ChatGPT to assess optimal format
+* Measure potential Sentence Transformers
+    * Identify a set of potential Sentence Transformers
+    * Generate a subset of alerts (roughly 20-30) from the flattened alerts
+    * Create encodings of this subset of alerts with all potential sentence transformers
+    * Store these encodings in Milvus vector databases
+    * Connect these databases with the highest performing base LLM measured previously
+    * Query the LLM about a set of alerts and details from each vector database
+    * Output results to a set of plaintext files
+    * Review the results and establish a score for each transformer
+    * Encode full dataset with top two sentence transformers for final user testing
+
+
+## Potential Base LLMs
 * ~~**deepseek-r1**: [https://ollama.com/library/deepseek-r1](https://ollama.com/library/deepseek-r1)~~
     * ~~deepseek-r1:8b~~
     * ~~"The model has demonstrated outstanding performance across various benchmark evaluations, including mathematics, programming, and general logic."~~
