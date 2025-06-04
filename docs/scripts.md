@@ -125,13 +125,13 @@ python3 web_crawler.py
 ```
 
 
-# teams_flattener.py
+## teams_flattener.py
 
 A script for flattening the output of ms_crawler.py for embedding.
 
 This script can be found at [https://github.com/amerck/oms_practicum/tree/main/source/data_flattening/ms_teams](https://github.com/amerck/oms_practicum/tree/main/source/data_flattening/ms_teams).
 
-## Configuration
+### Configuration
 
 The script requires three template files compatible with `string.Template().substitute()`.
 
@@ -155,7 +155,7 @@ $attachments
 $replies
 ```
 
-## Command-line arguments
+### Command-line arguments
 
 ```text
  % python teams_flattener.py -h                                                                                                     
@@ -173,7 +173,7 @@ optional arguments:
                         Directory containing output template files
 ```
 
-## Running
+### Running
 
 In order to run the script, execute the following command:
 
