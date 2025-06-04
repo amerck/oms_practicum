@@ -37,7 +37,7 @@ class Graph:
 
     async def list_messages(self, team_id, channel_id):
         query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
-            top=5,
+            top=10,
             expand=["replies"],
         )
 
@@ -99,14 +99,16 @@ def process_user(from_):
 
 
 def process_result(result):
+    id_ = result.id
     attachments = process_attachments(result.attachments)
     content_type = result.body.content_type
     content = result.body.content
     created_date_time = result.created_date_time.strftime('%Y-%m-%dT%H:%M:%SZ')
     from_ = process_user(result.from_)
+    subject = result.subject
     reactions = process_reactions(result.reactions)
     replies = process_replies(result.replies)
-    message = {'attachments': attachments, 'content': content, 'content_type': content_type,
+    message = {'id': id_, 'subject': subject, 'attachments': attachments, 'content': content, 'content_type': content_type,
               'timestamp': created_date_time, 'user': from_, 'reactions': reactions, 'replies': replies}
     return {'message': message}
 
@@ -123,7 +125,7 @@ async def main():
     channel_id = teams_settings['channelId']
     output_file = teams_settings['outputFile']
 
-    fout = open(output_file, 'w')
+    f_out = open(output_file, 'w')
 
     graph = Graph(azure_settings)
 
@@ -133,7 +135,7 @@ async def main():
     odata_next_link = results.odata_next_link
     for result in results.value:
         r = process_result(result)
-        fout.write('%s\n' % json.dumps(r))
+        f_out.write('%s\n' % json.dumps(r))
     i += 1
 
     while odata_next_link:
@@ -147,8 +149,9 @@ async def main():
         i += 1
         for result in results.value:
             r = process_result(result)
-            fout.write('%s\n' % json.dumps(r))
+            f_out.write('%s\n' % json.dumps(r))
 
+    f_out.close()
 
 if __name__ == '__main__':
     asyncio.run(main())
