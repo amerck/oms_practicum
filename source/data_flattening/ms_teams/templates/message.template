@@ -1,0 +1,12 @@
+# Teams Message
+
+* Subject: $subject
+* Timestamp: $timestamp
+* Sender: $sender
+
+## Content
+$content
+$attachments
+
+## Replies
+$replies
