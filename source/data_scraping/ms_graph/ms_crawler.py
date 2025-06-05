@@ -37,7 +37,7 @@ class Graph:
 
     async def list_messages(self, team_id, channel_id):
         query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
-            top=10,
+            top=5,
             expand=["replies"],
         )
 
