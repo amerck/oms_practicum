@@ -6,6 +6,7 @@ dev_environ/jupyter-data/.ipynb_checkpoints
 dev_environ/jupyter-data/test_outputs/*
 dev_environ/milvus
 source/data_flattening/ms_teams/output
+source/data_flattening/service_now/output
 source/data_scraping/ms_graph/config
 source/data_scraping/ms_graph/output
 source/data_scraping/service_now/config
