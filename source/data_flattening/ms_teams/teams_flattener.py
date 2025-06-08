@@ -103,7 +103,7 @@ class TeamsMessage:
 
     def __init__(self, message_template, attachment_template, reply_template):
         """
-        Initialize new message message object
+        Initialize new message object
 
         :param message_template: Template for Message output string
         :param attachment_template: Template for Attachment output string
