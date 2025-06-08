@@ -264,6 +264,11 @@ python teams_flattener.py -i ./message_archive_full.json -o ./flattened_output.m
 
 ## html_flattener.py
 
+A script for flattening the output of web_crawler.py for embedding.
+
+This script can be found at [https://github.com/amerck/oms_practicum/tree/main/source/data_flattening/web_data](https://github.com/amerck/oms_practicum/tree/main/source/data_flattening/web_data).
+
+
 ### Command-line arguments
 
 ```text
@@ -290,6 +295,11 @@ In order to run the script, execute the following command:
 
 
 ## sn_flattener.py
+
+A script for flattening the output of sn_crawler.py for embedding.
+
+This script can be found at [https://github.com/amerck/oms_practicum/tree/main/source/data_flattening/service_now](https://github.com/amerck/oms_practicum/tree/main/source/data_flattening/service_now).
+
 
 ### Configuration
 
