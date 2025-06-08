@@ -7,10 +7,16 @@ In order to train the model with organization specific data, we will collect the
 * All security alerts and related comments received by the Operations Team over several years
 * All internal and external policy documents
 * Internal wiki and repository of security playbooks
-
-Future goals:
-
 * All incident and support ticket content from any ticket number referenced in an alert
+
+## Additional Data
+
+Additional data may be retrieved on demand as part of the alert handling process. This may include:
+
+* Network and device inventory data
+* SIEM logs
+* EDR events
+* Incident and support ticket notes
 
 
 ## Design Plan
@@ -30,6 +36,7 @@ Future goals:
 * Test embeddings against the selected LLM base model
 * Select the best performing sentence-transformer and create embeddings for full datasets
 * Create accurate prompts for querying the vector database
+* Build an agent for querying the vector database and real-time data sources
 * Build intermediate API for interacting with vector database and base-LLM
 * Build front-end for security operations analysts
 * Integrate with existing alert solution
@@ -37,4 +44,10 @@ Future goals:
 
 # Architecture Diagram
 
-![Architecture Diagram](images/arch_diagram.png)
+## General Architecture
+
+![Architecture Diagram](images/full_arch_diagram.png)
+
+## Agent 
+
+![Agent Architecture Diagram](images/agent_arch_diagram.png)
