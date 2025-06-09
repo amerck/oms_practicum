@@ -48,6 +48,6 @@ Additional data may be retrieved on demand as part of the alert handling process
 
 ![Architecture Diagram](images/full_arch_diagram.png)
 
-## Agent 
+## Agent Architecture
 
 ![Agent Architecture Diagram](images/agent_arch_diagram.png)
