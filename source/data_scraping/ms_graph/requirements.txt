@@ -1,3 +1,0 @@
-python-msgraph
-azure-identity
-msgraph-sdk
