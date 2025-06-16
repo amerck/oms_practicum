@@ -1,7 +1,7 @@
 site_name: Alex Merck's OMS Cybersecurity Practicum
 site_url: https://amerck_oms_practicum.readthedocs.io
 theme: readthedocs
-docs_dir: docs
+docs_dir: mkdocs
 nav:
     - index.md
     - Architecture: architecture.md

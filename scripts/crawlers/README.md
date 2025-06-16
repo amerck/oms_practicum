@@ -1,5 +1,7 @@
 # ms_crawler.py
 
+A script for scraping all messages, comments, and reactions from a Microsoft Teams channel and storing this data in JSON format.
+
 ## Configuration
 
 The configuration file for `ms_crawler.py` should be stored under `./config/config.cfg` with the following structure:
@@ -16,12 +18,28 @@ channelId =
 outputFile = output/message_archive.json
 ```
 
+## Command-line arguments
+
+```text
+% PYTHONPATH=. python3 scripts/crawlers/ms_crawler.py -h
+/Users/amerck/Projects/oms_practicum/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+usage: ms_crawler.py [-h] -c CONFIG
+
+Crawls Microsoft Graph API for Teams messages.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Configuration file
+```
+
 ## Running
 
 In order to run the script, execute the following command:
 
 ```shell
-python3 ms_crawler.py
+PYTHONPATH=. python3 scripts/crawlers/ms_crawler.py
 ```
 
 You will receive the following prompt:
@@ -76,7 +94,7 @@ Enter the URL in a browser, submit the code, and authenticate to Microsoft as yo
 
 # find_ticket_numbers.py
 
-Pulls a list of ServiceNow ticket numbers from any text file
+A script for pulling a list of ServiceNow ticket numbers from any text file.
 
 ## Command-line arguments
 
@@ -106,7 +124,7 @@ PYTHONPATH=. python3 scripts/crawlers/find_ticket_numbers.py -i ./some_text.json
 
 # sn_crawler.py
 
-Pulls the contents of ServiceNow tickets from the SN API and stores the data in JSON format
+A script for pulling the contents of ServiceNow tickets from the SN API and stores the data in JSON format.
 
 ## Configuration
 
@@ -153,6 +171,8 @@ PYTHONPATH=. python3 scripts/crawlers/sn_crawler.py -c ./config/config.cfg -i ./
 
 # web_crawler.py
 
+A script for crawling a website and copying all HTML and binary files to disk.
+
 ## Initialization
 
 After installing Playwright via pip, run the following command to install browsers:
@@ -180,6 +200,20 @@ Description of the configuration options are as follows:
 * auth_verification_url: The URL that confirms authentication was successful
 * state_path: The path for the Playwright state file
 * output_dir: The path of the directory to write the HTML archive to
+
+## Command-line arguments
+
+```text
+% PYTHONPATH=. python3 scripts/crawlers/web_crawler.py -h
+usage: web_crawler.py [-h] -c CONFIG
+
+Crawls Microsoft Graph API for Teams messages.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Configuration file
+```
 
 ## Running
 

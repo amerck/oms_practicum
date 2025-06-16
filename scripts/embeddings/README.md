@@ -1,6 +1,6 @@
 # store_embeddings.py
 
-Store text embeddings in vector database.
+A script for storing text embeddings in vector database.
 
 ## Configuration
 
@@ -61,7 +61,7 @@ PYTHONPATH=. python3 scripts/embeddings/store_embeddings.py -c config/config.cfg
 
 # query_vector_db.py
 
-Query the vector database for similar text.
+A script for querying a vector database collection for similar text.
 
 ## Configuration
 

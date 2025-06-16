@@ -1,5 +1,7 @@
 # html_flattener.py
 
+A script for flattening the output of web_crawler.py for embedding.
+
 ## Command-line arguments
 
 ```text
@@ -26,6 +28,8 @@ In order to run the script, execute the following command:
 
 
 # sn_flattener.py
+
+A script for flattening the output of sn_crawler.py for embedding.
 
 ## Configuration
 
@@ -95,6 +99,8 @@ In order to run the script, execute the following command:
 
 
 # teams_flattener.py
+
+A script for flattening the output of ms_crawler.py for embedding.
 
 ## Configuration
 
