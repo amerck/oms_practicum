@@ -1,10 +1,17 @@
+import os
+import argparse
 import configparser
 from itso_ai.utils.web_crawler import WebCrawler
 
 
 def main():
+    parser = argparse.ArgumentParser(description='Crawls Microsoft Graph API for Teams messages.')
+    parser.add_argument('-c', '--config', required=True, help='Configuration file')
+    args = parser.parse_args()
+
+    # Load settings
     config = configparser.ConfigParser()
-    config.read(['./config/config.cfg', './config/config.dev.cfg'])
+    config.read(os.path.expanduser(args.config))
     crawler_settings = config['crawler']
 
     domain = crawler_settings['domain']

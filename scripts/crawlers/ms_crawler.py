@@ -1,5 +1,7 @@
+import os
 import json
 import asyncio
+import argparse
 import configparser
 from itso_ai.clients.microsoft import MSGraphAPIClient
 
@@ -64,10 +66,13 @@ def process_result(result):
 
 
 async def main():
+    parser = argparse.ArgumentParser(description='Crawls Microsoft Graph API for Teams messages.')
+    parser.add_argument('-c', '--config', required=True, help='Configuration file')
+    args = parser.parse_args()
 
     # Load settings
     config = configparser.ConfigParser()
-    config.read(['./config/config.cfg', './config/config.dev.cfg'])
+    config.read(os.path.expanduser(args.config))
     azure_settings = config['azure']
     teams_settings = config['teams']
 
@@ -102,6 +107,7 @@ async def main():
             f_out.write('%s\n' % json.dumps(r))
 
     f_out.close()
+
 
 if __name__ == '__main__':
     asyncio.run(main())
