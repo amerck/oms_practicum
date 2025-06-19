@@ -34,7 +34,7 @@ class TeamsParser:
         summary_dict = {'text': text,
                         'metadata': {
                             'type': 'summary',
-                            'message_id': str(self.msg_id),
+                            'msg_id': str(self.msg_id),
                             'msg_timestamp': str(self.timestamp),
                             'msg_sender': self.sender,
                             'subject': subject,
@@ -58,13 +58,15 @@ class TeamsParser:
             else:
                 content = reply.get('content')
 
+            reply_id = uuid.uuid4().hex
             reply_sender = reply.get('user', '')
             reply_timestamp = reply.get('timestamp', '')
             text = "Reply by %s at %s: %s" % (reply_sender, reply_timestamp, content)
             reply_dict = {'text': text,
                           'metadata': {
                               'type': 'reply',
-                              'message_id': str(self.msg_id),
+                              'reply_id': str(reply_id),
+                              'msg_id': str(self.msg_id),
                               'reply_timestamp': str(reply_timestamp),
                               'reply_sender': reply_sender,
                               'msg_timestamp': str(timestamp),
@@ -103,6 +105,7 @@ class TeamsParser:
                          'msg_timestamp': self.timestamp,
                          'activity_title': activity_title,
                          'ip_addresses': metadata.get('ip_addresses', []),
+                         'networks': metadata.get('networks', []),
                          'domains': metadata.get('domains', []),
                          'urls': metadata.get('urls', []),
                          'email_addresses': metadata.get('email_addresses', []),
