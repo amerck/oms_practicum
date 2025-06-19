@@ -12,41 +12,32 @@ def get_embeddings(text):
 
 
 def teams_vector(query, limit=5):
-    print("Teams vector: %s" % query)
     vector = get_embeddings(query)
-    print(vector)
     results = client.query_points(
         collection_name='teams_alerts',
         query=vector,
         limit=limit
     )
-    print(results)
     return results
 
 
 def security_site_vector(query, limit=5):
-    print("Security site vector: %s" % query)
     vector = get_embeddings(query)
-    print(vector)
     results = client.query_points(
         collection_name='itso_site',
         query=vector,
         limit=limit
     )
-    print(results)
     return results
 
 
 def security_wiki_vector(query, limit=5):
-    print("Security wiki vector: %s" % query)
     vector = get_embeddings(query)
-    print(vector)
     results = client.query_points(
         collection_name='itso_wiki',
         query=vector,
         limit=limit
     )
-    print(results)
     return results
 
 
