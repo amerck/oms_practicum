@@ -19,9 +19,12 @@ services:
     environment:
       - NEO4J_AUTH=neo4j/changeme
     ports:
-      - "7474:7474"
-      - "7687:7687"
+      - "127.0.0.1:7474:7474"
+      - "127.0.0.1:7687:7687"
     restart: always
+    user: '1000'
+    group_add:
+      - '1000'
 
 
   qdrant:
