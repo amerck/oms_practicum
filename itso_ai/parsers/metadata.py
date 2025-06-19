@@ -1,7 +1,8 @@
 import re
 import requests
 
-IP_REGEX = r'\b(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\b'
+IP_REGEX = r'\b((?:(?:25[0-5]|2[0-4]\d|1\d{2}|0?\d{1,2})\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|0?\d{1,2}))(?=(?:/32\b)|(?:\b(?!/\d)))'
+NETWORK_REGEX = r'\b(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)/(?:[0-2]?\d|3[01])\b'
 DOMAIN_REGEX = r'\b(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}\b'
 URL_REGEX = r'\b(?:https?|ftp):\/\/(?:www\.)?(?:[a-zA-Z0-9-]+\.[a-zA-Z]{2,}|(?:\d{1,3}\.){3}\d{1,3})(?::\d+)?(?:\/[^\s]*)?\b'
 EMAIL_REGEX = r'\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b'
@@ -41,6 +42,12 @@ class MetadataParser:
 
 
     @staticmethod
+    def match_network(text):
+        match = re.findall(NETWORK_REGEX, text)
+        return list(set(match))
+
+
+    @staticmethod
     def match_url(text):
         match = re.findall(URL_REGEX, text)
         return list(set(match))
@@ -71,6 +78,7 @@ class MetadataParser:
 
     def find_metadata(self, text):
         metadata = {'ip_addresses': self.match_ip(text),
+                    'networks': self.match_network(text),
                     'domains': self.match_domain(text),
                     'urls': self.match_url(text),
                     'email_addresses': self.match_email(text),
