@@ -1,11 +1,13 @@
 .idea
 .venv
 *.pyc
+configs
 data_files
 dev_environ/jupyter-data/.ipynb_checkpoints
 dev_environ/jupyter-data/test_outputs/*
+dev_environ/neo4j
 dev_environ/qdrant_storage
-junk
+scratch
 source/data_flattening/service_now/output
 source/data_scraping/ms_graph/config
 source/data_scraping/ms_graph/output
