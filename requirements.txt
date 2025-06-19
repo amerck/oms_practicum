@@ -3,6 +3,7 @@ langchain-text-splitters
 python-msgraph
 azure-identity
 msgraph-sdk
-pysnc
 playwright
 markdownify
+neo4j
+requests
