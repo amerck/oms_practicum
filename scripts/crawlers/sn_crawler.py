@@ -2,40 +2,7 @@ import os
 import json
 import argparse
 import configparser
-import pysnc
-
-
-def process_task(gr):
-    task_dict = {'u_service_provider': gr.u_service_provider.get_display_value(),
-                 'sys_updated_on': gr.sys_updated_on.get_display_value(),
-                 'number': gr.number.get_display_value(),
-                 'opened_by': gr.opened_by.get_display_value(),
-                 'sys_created_on': gr.sys_created_on.get_display_value(),
-                 'sys_created_by': gr.sys_created_by.get_display_value(),
-                 'closed_at': gr.closed_at.get_display_value(),
-                 'impact': gr.impact.get_display_value(),
-                 'priority': gr.priority.get_display_value(),
-                 'u_it_service': gr.u_it_service.get_display_value(),
-                 'opened_at': gr.opened_at.get_display_value(),
-                 'short_description': gr.short_description.get_display_value(),
-                 'assignment_group': gr.assignment_group.get_display_value(),
-                 'description': gr.description.get_display_value(),
-                 'close_notes': gr.close_notes.get_display_value(),
-                 'service_offering': gr.service_offering.get_display_value(),
-                 'sys_id': gr.sys_id.get_display_value(),
-                 'urgency': gr.urgency.get_display_value(),
-                 'assigned_to': gr.assigned_to.get_display_value(),
-                 'u_application': gr.u_application.get_display_value()}
-    return {'ticket': task_dict}
-
-
-def handle_task(task_number, client):
-    gr = client.GlideRecord('task')
-    gr.get('number', task_number)
-    if not gr:
-        return None
-    task = process_task(gr)
-    return task
+from itso_ai.clients.servicenow import ServiceNowClient
 
 
 def main():
@@ -54,16 +21,20 @@ def main():
     sn_username = cfg.get('service_now', 'username')
     sn_password = cfg.get('service_now', 'password')
 
-    client = pysnc.ServiceNowClient(sn_url, (sn_username, sn_password))
+    client = ServiceNowClient(sn_url, sn_username, sn_password)
     fin = open(args.input, 'r')
     fout = open(args.output, 'w')
 
-    for line in fin:
-        task = handle_task(line.strip(), client)
-        if task:
-            fout.write('%s\n' % json.dumps(task))
+    tickets = fin.readlines()
+    unique_tickets = list(set(tickets))
+
+    for t in unique_tickets:
+        print("Processing ticket %s" % t.strip())
+        ticket = client.get_ticket_by_number(t.strip())
+        if ticket:
+            fout.write('%s\n' % json.dumps(ticket))
         else:
-            print("%s not found." % line.strip())
+            print("%s not found." % t.strip())
 
     fin.close()
     fout.close()
